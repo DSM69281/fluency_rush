@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FLUENCY RUSH</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="cursor"></div>
+<div class="grid-bg"></div>
+<div class="scanlines"></div>
+
+<!-- ═══ LOGIN ═══ -->
+<div id="loginScreen">
+  <div class="login-box">
+    <div class="login-logo">FLUENCY<br>RUSH</div>
+    <div class="login-sub">Desafios que aceleram sua fluência em inglês</div>
+    <input class="login-input" id="loginName" type="text"
+           placeholder="Digite seu nome para entrar..." maxlength="24" autocomplete="off">
+    <div id="loginError" class="login-error" style="display:none">
+      ⚠️ Nome inválido — mínimo 2 caracteres.
+    </div>
+    <button class="btn-login" id="btnLogin">ENTRAR NA PLATAFORMA →</button>
+    <div class="login-note">🔒 Seus dados são salvos em tempo real · Sem cadastro necessário</div>
+  </div>
+</div>
+
+<!-- ═══ APP ═══ -->
+<div id="mainApp" style="display:none">
+
+  <header>
+    <div class="logo-mark">FLUENCY<span class="rush">&nbsp;RUSH</span>
+      <div class="logo-dot"></div></div>
+    <div style="display:flex;align-items:center;gap:.6rem">
+      <span style="font-size:.8rem;color:var(--muted)">Olá,</span>
+      <span class="header-username" id="headerName"></span>
+    </div>
+    <div class="header-right">
+      <div class="stat-chip">🔥 <span id="hStreak">1</span> dias</div>
+      <div class="stat-chip">⚡ <span id="hXP">0</span> XP</div>
+      <div class="stat-chip">🟢 <span id="hOnline" style="color:var(--cyan)">— online</span></div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── ESQUERDA ── -->
+    <aside class="left-panel">
+
+      <div class="player-card">
+        <div class="player-avatar">⚡</div>
+        <div class="player-name" id="cardName">—</div>
+        <div class="player-tag" id="cardTag">@...</div>
+        <div class="xp-label"><span>XP total</span><span id="cardXP">0</span></div>
+        <div class="xp-bar"><div class="xp-fill" id="cardXPBar" style="width:2%"></div></div>
+      </div>
+
+      <div class="card">
+        <div class="sec-label">Trilha de Fluência</div>
+        <div class="track-step"><div class="step-dot done">✓</div><div class="step-info"><div class="step-name">Vocabulário Essencial</div><div class="step-sub">500 palavras</div></div><div class="step-xp">+400xp</div></div>
+        <div class="track-step"><div class="step-dot done">✓</div><div class="step-info"><div class="step-name">Gramática Acelerada</div><div class="step-sub">30 regras</div></div><div class="step-xp">+600xp</div></div>
+        <div class="track-step"><div class="step-dot active">▶</div><div class="step-info"><div class="step-name">Listening Intensivo</div><div class="step-sub">Em progresso</div></div><div class="step-xp" style="color:var(--orange)">+800xp</div></div>
+        <div class="track-step"><div class="step-dot locked">🔒</div><div class="step-info"><div class="step-name">Conversação Real</div><div class="step-sub">Bloqueada</div></div><div class="step-xp" style="color:var(--muted)">+1000xp</div></div>
+        <div class="track-step"><div class="step-dot locked">🔒</div><div class="step-info"><div class="step-name">Fluência Final C1</div><div class="step-sub">Bloqueada</div></div><div class="step-xp" style="color:var(--muted)">+2000xp</div></div>
+      </div>
+
+      <div class="card">
+        <div class="sec-label">Sequência de Dias</div>
+        <div class="streak-grid" id="streakGrid"></div>
+        <div style="font-size:.74rem;color:var(--muted);margin-top:.65rem;text-align:center" id="streakMsg">🔥 Continue assim!</div>
+      </div>
+
+      <div class="card">
+        <div class="sec-label">Conquistas</div>
+        <div class="ach-row" id="achRow">
+          <div class="ach-badge earned">🎯 Sniper</div>
+          <div class="ach-badge earned">⚡ Speedster</div>
+          <div class="ach-badge new">🔥 On Fire</div>
+          <div class="ach-badge earned">📚 Bookworm</div>
+          <div class="ach-badge locked">💎 Elite</div>
+          <div class="ach-badge locked">🌍 Global</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── CENTRO ── -->
+    <section class="center-panel">
+
+      <!-- Hero -->
+      <div class="hero-challenge">
+        <div class="hero-banner">
+          <div class="hero-banner-art"></div>
+          <div class="hero-banner-text">CHALLENGE</div>
+          <div class="hero-badge">🔴 AO VIVO</div>
+          <div class="hero-timer">
+            <div class="timer-dot"></div>
+            <span id="heroTimer">04:23:11</span> restantes
+          </div>
+          <div class="hero-icon">🎯</div>
+        </div>
+        <div class="hero-body">
+          <h2>Desafio do Dia: Immersion Sprint</h2>
+          <p>Inglês puro, sem pause, sem tradução. Cada resposta certa acelera sua fluência.</p>
+          <div class="hero-meta">
+            <div class="meta-tag hi">⚡ +350 XP</div>
+            <div class="meta-tag">⏱️ 20 min</div>
+            <div class="meta-tag">🎧 Listening + Speaking</div>
+            <div class="meta-tag" id="liveCount">🔴 carregando...</div>
+          </div>
+          <button class="btn-go" data-challenge="Immersion Sprint" data-xp="350">
+            INICIAR DESAFIO <span class="arrow">→</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Challenges Grid -->
+      <div class="sec-label" style="margin-top:.25rem">Desafios de Fluência</div>
+      <div class="challenges-grid">
+        <div class="ch-card lime" data-challenge="Shadow Challenge" data-xp="120">
+          <span class="diff-badge diff-intermediate">Intermediate</span>
+          <span class="ch-icon">🔊</span>
+          <div class="ch-name">Shadow Challenge</div>
+          <div class="ch-desc">Repita frases nativas no mesmo ritmo de falantes reais.</div>
+          <div class="ch-footer"><span class="ch-xp" style="color:var(--lime)">+120 XP</span><span class="ch-time">⏱ 10 min</span></div>
+        </div>
+        <div class="ch-card cyan" data-challenge="Word Sniper" data-xp="80">
+          <span class="diff-badge diff-beginner">Beginner</span>
+          <span class="ch-icon">🎯</span>
+          <div class="ch-name">Word Sniper</div>
+          <div class="ch-desc">Identifique vocabulários em contexto real em 3 segundos.</div>
+          <div class="ch-footer"><span class="ch-xp" style="color:var(--cyan)">+80 XP</span><span class="ch-time">⏱ 5 min</span></div>
+        </div>
+        <div class="ch-card pink" data-challenge="Debate Mode" data-xp="200">
+          <span class="diff-badge diff-advanced">Advanced</span>
+          <span class="ch-icon">💬</span>
+          <div class="ch-name">Debate Mode</div>
+          <div class="ch-desc">Argumente em inglês. Responda sem traduzir, sem pausar.</div>
+          <div class="ch-footer"><span class="ch-xp" style="color:var(--pink)">+200 XP</span><span class="ch-time">⏱ 15 min</span></div>
+        </div>
+        <div class="ch-card orange" data-challenge="Speed Grammar" data-xp="150">
+          <span class="diff-badge diff-intermediate">Intermediate</span>
+          <span class="ch-icon">⏰</span>
+          <div class="ch-name">Speed Grammar</div>
+          <div class="ch-desc">30 questões de gramática em 90 segundos. Sem dicas.</div>
+          <div class="ch-footer"><span class="ch-xp" style="color:var(--orange)">+150 XP</span><span class="ch-time">⏱ 90s</span></div>
+        </div>
+        <div class="ch-card gold" data-challenge="Elite Battle" data-xp="500">
+          <span class="diff-badge diff-elite">Elite</span>
+          <span class="ch-icon">👑</span>
+          <div class="ch-name">Elite Battle</div>
+          <div class="ch-desc">Enfrente outros jogadores em batalhas de inglês ao vivo.</div>
+          <div class="ch-footer"><span class="ch-xp" style="color:var(--gold)">+500 XP</span><span class="ch-time">⏱ 25 min</span></div>
+        </div>
+        <div class="ch-card purple" data-challenge="Story Mode" data-xp="100">
+          <span class="diff-badge diff-beginner">Beginner</span>
+          <span class="ch-icon">🎬</span>
+          <div class="ch-name">Story Mode</div>
+          <div class="ch-desc">Desvende histórias respondendo perguntas em inglês.</div>
+          <div class="ch-footer"><span class="ch-xp" style="color:#9b59b6">+100 XP</span><span class="ch-time">⏱ 12 min</span></div>
+        </div>
+      </div>
+
+      <!-- Blitz Quiz -->
+      <div class="blitz-card">
+        <div class="blitz-header">
+          <div class="blitz-title">⚡ BLITZ QUIZ</div>
+          <div class="blitz-countdown" id="blitzTimerEl">00:45</div>
+        </div>
+        <div class="blitz-body">
+          <div class="blitz-score-row">
+            <span>Questão <strong id="qnum">1</strong></span>
+            <span>Score: <strong id="qscore" style="color:var(--lime)">0</strong> corretas</span>
+          </div>
+          <div class="blitz-progress">
+            <div class="blitz-progress-fill" id="blitzBarEl" style="width:100%"></div>
+          </div>
+          <div style="height:1rem"></div>
+          <div class="blitz-question" id="blitzQ">Carregando questão...</div>
+          <div class="blitz-instruction">Escolha antes do tempo acabar!</div>
+          <div class="blitz-options" id="blitzOptions"></div>
+        </div>
+      </div>
+
+      <!-- Fill in the Blank -->
+      <div class="fill-card">
+        <div class="fill-header">
+          <h3>💥 Completar a Frase</h3>
+          <div class="speed-badge">SPEED MODE</div>
+        </div>
+        <div class="fill-sentence" id="fillSentence"></div>
+        <div class="fill-input-wrap">
+          <input class="fill-input" id="fillInput" type="text"
+                 placeholder="Digite a resposta em inglês..." autocomplete="off">
+          <button class="btn-check" id="btnCheck">Verificar</button>
+        </div>
+        <div class="fill-hint" id="fillHint"></div>
+      </div>
+
+    </section>
+
+    <!-- ── DIREITA ── -->
+    <aside class="right-panel">
+
+      <!-- Vocab Rapid Fire -->
+      <div class="rapid-fire">
+        <div class="sec-label" style="color:var(--pink)">⚡ Vocab Rapid Fire</div>
+        <div class="rapid-word" id="rapidWord">—</div>
+        <div class="rapid-pron" id="rapidPron"></div>
+        <div class="rapid-meaning" id="rapidMeaning"></div>
+        <div class="rapid-btns">
+          <button class="rbtn rbtn-know" id="btnKnow">✓ Sei</button>
+          <button class="rbtn rbtn-hard" id="btnHard">✗ Difícil</button>
+          <button class="rbtn rbtn-skip" id="btnSkip">→ Skip</button>
+        </div>
+        <div class="rapid-bar"><div class="rapid-bar-fill" id="rapidBarFill"></div></div>
+      </div>
+
+      <!-- Chat -->
+      <div class="chat-wrap">
+        <div class="chat-header">
+          <div class="online-dot"></div>
+          <h3>Chat em Tempo Real</h3>
+        </div>
+        <div class="chat-box" id="chatBox">
+          <div class="chat-empty">💬 Seja o primeiro a escrever!</div>
+        </div>
+        <div class="chat-input-row">
+          <input class="chat-input" id="chatInput" type="text"
+                 placeholder="Mensagem..." maxlength="200" autocomplete="off">
+          <button class="btn-send" id="btnSend">→</button>
+        </div>
+      </div>
+
+      <!-- Ranking -->
+      <div class="card">
+        <div class="sec-label">Ranking Real-Time</div>
+        <div id="leaderboard">
+          <div style="font-size:.76rem;color:var(--muted);text-align:center;padding:.5rem">Carregando...</div>
+        </div>
+      </div>
+
+      <!-- Feed -->
+      <div class="card">
+        <div class="sec-label">Feed de Atividades</div>
+        <ul class="live-feed" id="liveFeed">
+          <li style="font-size:.74rem;color:var(--muted);padding:.5rem 0">Aguardando atividades...</li>
+        </ul>
+      </div>
+
+      <!-- Missões -->
+      <div class="card">
+        <div class="sec-label">Missões Diárias</div>
+        <div class="mission-item done">
+          <span class="mission-icon">✅</span>
+          <div class="mission-info"><div class="mission-name">Entrar na plataforma</div></div>
+          <div class="mission-xp" style="color:var(--lime)">+10 XP</div>
+        </div>
+        <div class="mission-item todo" id="missionBlitz">
+          <span class="mission-icon">🔲</span>
+          <div class="mission-info">
+            <div class="mission-name">Acertar 5x no Blitz</div>
+            <div class="mission-sub" id="missionBlitzSub">0/5 acertos</div>
+          </div>
+          <div class="mission-xp" style="color:var(--muted)">+150 XP</div>
+        </div>
+        <div class="mission-item todo" id="missionChat">
+          <span class="mission-icon">🔲</span>
+          <div class="mission-info"><div class="mission-name">Enviar mensagem no chat</div></div>
+          <div class="mission-xp" style="color:var(--muted)">+30 XP</div>
+        </div>
+      </div>
+
+    </aside>
+  </main>
+</div>
+
+<!-- TOAST -->
+<div class="toast-container" id="toastContainer"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
