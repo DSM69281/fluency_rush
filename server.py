@@ -23,6 +23,7 @@ from flask_cors import CORS
 BASE_DIR  = Path(__file__).parent
 DATA_FILE = BASE_DIR / "data" / "db.json"
 STATIC    = BASE_DIR / "static"
+FRONTEND_DIRS = [STATIC, BASE_DIR]
 
 app  = Flask(__name__, static_folder=str(STATIC))
 CORS(app)
@@ -60,11 +61,19 @@ def write_db(data: dict):
 # ── Rotas estáticas ────────────────────────────────────────────────────────────
 @app.route("/")
 def index():
-    return send_from_directory(str(STATIC), "index.html")
+    for directory in FRONTEND_DIRS:
+        index_file = directory / "index.html"
+        if index_file.exists():
+            return send_from_directory(str(directory), "index.html")
+    return ("index.html não encontrado (procurei em: static/ e raiz do projeto)", 404)
 
 @app.route("/<path:filename>")
 def static_files(filename):
-    return send_from_directory(str(STATIC), filename)
+    for directory in FRONTEND_DIRS:
+        file_path = directory / filename
+        if file_path.exists():
+            return send_from_directory(str(directory), filename)
+    return ("Arquivo não encontrado", 404)
 
 # ── SSE — stream de eventos em tempo real ─────────────────────────────────────
 @app.route("/events")
