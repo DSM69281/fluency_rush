@@ -18,8 +18,8 @@ O servidor (`server.py`) expõe uma API HTTP e um endpoint de eventos (SSE) para
 
 ## Requisitos
 
-- Linux (ou macOS/Windows com Python instalado)
-- Python 3.10+ recomendado
+- Windows 10/11
+- Python 3.10+ recomendado (com o Python adicionado ao PATH)
 
 ## Estrutura do repositório
 
@@ -32,22 +32,26 @@ O servidor (`server.py`) expõe uma API HTTP e um endpoint de eventos (SSE) para
 
 ## Como rodar (passo a passo)
 
-A partir da pasta do projeto:
-
-```bash
-cd /home/jonathan/PycharmProjects/fluency_rush
-```
+Abra o PowerShell ou o Prompt de Comando (cmd), navegue até a pasta do projeto e execute os passos abaixo.
 
 ### 1) Criar um ambiente isolado (venv)
 
 ```bash
-python3 -m venv venv
+python -m venv venv
 ```
 
 ### 2) Ativar a venv
 
+PowerShell:
+
 ```bash
-source venv/bin/activate
+venv\Scripts\Activate.ps1
+```
+
+cmd:
+
+```bash
+venv\Scripts\activate.bat
 ```
 
 Se a venv estiver ativa, seu terminal normalmente passa a mostrar `(venv)`.
@@ -85,6 +89,52 @@ Acesse:
 - `GET /api/feed` e `POST /api/feed`: feed de atividades
 - `GET /api/chat` e `POST /api/chat`: chat
 - `POST /api/reset`: reseta o banco local
+
+## Perguntas e conteúdo configuráveis (questions.json)
+
+As perguntas do quiz e a lista de vocabulário podem ser configuradas no arquivo `questions.json`.
+
+O frontend tenta carregar esse arquivo automaticamente ao fazer login. Se o arquivo não existir ou tiver erro de formato, o app usa um conteúdo padrão embutido no `app.js`.
+
+### Onde fica
+
+- `questions.json` (na raiz do repositório)
+
+### Formato do arquivo
+
+O arquivo possui três listas principais:
+
+- `blitz`: perguntas de múltipla escolha
+- `fill`: perguntas de completar a frase
+- `vocab`: cartões de vocabulário
+
+Campos esperados:
+
+- `blitz[]`:
+  - `id`: identificador
+  - `q`: texto/HTML da pergunta
+  - `opts`: lista de opções
+  - `c`: índice (0-based) da opção correta
+  - `explanation`: explicação curta (opcional)
+
+- `fill[]`:
+  - `id`: identificador
+  - `q`: texto/HTML com o espaço em branco
+  - `answer`: resposta correta
+  - `hint`: dica
+
+- `vocab[]`:
+  - `w`: palavra
+  - `p`: pronúncia
+  - `m`: significado
+
+### Como trocar as perguntas
+
+1. Edite `questions.json`
+2. Salve o arquivo
+3. Recarregue a página no navegador
+
+Para manter o app funcionando, garanta que `blitz` tenha pelo menos 1 pergunta e `fill` pelo menos 1 pergunta.
 
 ## Dicas e solução de problemas
 

@@ -33,7 +33,7 @@ const FAKE_USERS = [
 ];
 
 // ── Conteúdo ───────────────────────────────────────────────────────────────
-const BLITZ_QUESTIONS = [
+let BLITZ_QUESTIONS = [
   { q:'Which sentence uses <span class="hl">Present Perfect</span> correctly?',
     opts:['She went to Paris last year.','She has been to Paris twice.','She is going soon.','She was going yesterday.'], c:1 },
   { q:'Choose the correct <span class="hl">conditional</span>:',
@@ -46,7 +46,7 @@ const BLITZ_QUESTIONS = [
     opts:['She had left before he arrived.','She has left before he arrived.','She left before he had arrived.','She was leaving when he arrived.'], c:0 },
 ];
 
-const FILL_QUESTIONS = [
+let FILL_QUESTIONS = [
   { q:'"If I <span class="fill-blank">___</span> (know) about the meeting, I would have attended."',
     answer:'had known', hint:'💡 3rd conditional — If + Past Perfect.' },
   { q:'"She <span class="fill-blank">___</span> (live) here for 10 years by next month."',
@@ -57,7 +57,7 @@ const FILL_QUESTIONS = [
     answer:'will have finished', hint:'💡 Future Perfect in time clauses.' },
 ];
 
-const VOCAB = [
+let VOCAB = [
   { w:'ELOQUENT',   p:'/ˈel.ə.kwənt/ · adj',  m:'Expressivo e persuasivo na fala ou escrita.' },
   { w:'PERSEVERE',  p:'/ˌpɜː.sɪˈvɪər/ · verb', m:'Continuar com determinação apesar das dificuldades.' },
   { w:'TENACIOUS',  p:'/tɪˈneɪ.ʃəs/ · adj',    m:'Muito determinado; que não desiste facilmente.' },
@@ -67,6 +67,26 @@ const VOCAB = [
   { w:'ARTICULATE', p:'/ɑːˈtɪk.jʊ.lət/ · adj', m:'Capaz de expressar ideias com clareza e fluidez.' },
   { w:'PROFOUND',   p:'/prəˈfaʊnd/ · adj',      m:'De grande profundidade ou intensidade; significativo.' },
 ];
+
+async function loadQuestionsConfig() {
+  try {
+    const res = await fetch(`${API}/questions.json`, { cache: 'no-store' });
+    if (!res.ok) return;
+    const cfg = await res.json();
+
+    if (Array.isArray(cfg.blitz) && cfg.blitz.length) {
+      BLITZ_QUESTIONS = cfg.blitz.map(x => ({ q: x.q, opts: x.opts, c: x.c }));
+    }
+    if (Array.isArray(cfg.fill) && cfg.fill.length) {
+      FILL_QUESTIONS = cfg.fill.map(x => ({ q: x.q, answer: x.answer, hint: x.hint }));
+    }
+    if (Array.isArray(cfg.vocab) && cfg.vocab.length) {
+      VOCAB = cfg.vocab.map(x => ({ w: x.w, p: x.p, m: x.m }));
+    }
+  } catch (e) {
+    console.warn('Não foi possível carregar questions.json; usando conteúdo padrão.', e);
+  }
+}
 
 // ═══════════════════════════════════════════════════════════
 //  INIT
@@ -169,6 +189,7 @@ async function doLogin() {
 
   // Inicializa módulos
   initSSE();
+  await loadQuestionsConfig();
   loadFill();
   loadRapid();
   startBlitz();
