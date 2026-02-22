@@ -1,0 +1,689 @@
+{
+  "version": 1,
+  "blitz": [
+    {
+      "id": "b001",
+      "q": "Choose the correct sentence in the <span class=\"hl\">Present Perfect</span>.",
+      "opts": [
+        "I have seen him yesterday.",
+        "I saw him already.",
+        "I have already seen him.",
+        "I see him yet."
+      ],
+      "c": 2,
+      "explanation": "Use Present Perfect with 'already' for an unspecified time before now: have/has + past participle."
+    },
+    {
+      "id": "b002",
+      "q": "Choose the correct <span class=\"hl\">1st conditional</span>.",
+      "opts": [
+        "If it rains, we will stay home.",
+        "If it will rain, we stay home.",
+        "If it rained, we will stay home.",
+        "If it rains, we stayed home."
+      ],
+      "c": 0,
+      "explanation": "1st conditional: If + present simple, will + base verb."
+    },
+    {
+      "id": "b003",
+      "q": "Which word is a synonym of <span class=\"hl\">resilient</span>?",
+      "opts": [
+        "Fragile",
+        "Adaptable",
+        "Careless",
+        "Jealous"
+      ],
+      "c": 1,
+      "explanation": "Resilient means able to recover quickly; 'adaptable' is closest here."
+    },
+    {
+      "id": "b004",
+      "q": "Complete: \"I wish I <span class=\"hl\">___</span> more time.\"",
+      "opts": [
+        "have",
+        "had",
+        "will have",
+        "am having"
+      ],
+      "c": 1,
+      "explanation": "Wish about the present uses past simple: I wish I had..."
+    },
+    {
+      "id": "b005",
+      "q": "Choose the correct use of the <span class=\"hl\">Past Perfect</span>.",
+      "opts": [
+        "She had left before he arrived.",
+        "She left before he arrives.",
+        "She has left before he arrived.",
+        "She was left before he arrived."
+      ],
+      "c": 0,
+      "explanation": "Past Perfect shows the earlier past action: had left before arrived."
+    },
+    {
+      "id": "b006",
+      "q": "Choose the correct preposition: \"I am interested <span class=\"hl\">___</span> English.\"",
+      "opts": [
+        "on",
+        "in",
+        "at",
+        "to"
+      ],
+      "c": 1,
+      "explanation": "The collocation is 'interested in'."
+    },
+    {
+      "id": "b007",
+      "q": "Which sentence is <span class=\"hl\">passive voice</span>?",
+      "opts": [
+        "They built the bridge in 2010.",
+        "The bridge was built in 2010.",
+        "They are building the bridge.",
+        "The bridge built them."
+      ],
+      "c": 1,
+      "explanation": "Passive: be + past participle (was built)."
+    },
+    {
+      "id": "b008",
+      "q": "Choose the correct option: \"I\"ve lived here <span class=\"hl\">___</span> 2020.\"",
+      "opts": [
+        "for",
+        "since",
+        "during",
+        "by"
+      ],
+      "c": 1,
+      "explanation": "Use 'since' with a starting point (2020)."
+    },
+    {
+      "id": "b009",
+      "q": "Pick the correct sentence with <span class=\"hl\">used to</span>.",
+      "opts": [
+        "I used to playing soccer.",
+        "I use to play soccer.",
+        "I used to play soccer.",
+        "I used play to soccer."
+      ],
+      "c": 2,
+      "explanation": "Structure: used to + base verb."
+    },
+    {
+      "id": "b010",
+      "q": "Choose the correct comparative: \"This is <span class=\"hl\">___</span> than that.\"",
+      "opts": [
+        "more easy",
+        "easier",
+        "easyer",
+        "most easy"
+      ],
+      "c": 1,
+      "explanation": "Comparative of 'easy' is 'easier'."
+    },
+    {
+      "id": "b011",
+      "q": "Choose the correct sentence with <span class=\"hl\">a/an</span>.",
+      "opts": [
+        "She is a honest person.",
+        "She is an honest person.",
+        "She is an university student.",
+        "She is a umbrella user."
+      ],
+      "c": 1,
+      "explanation": "Use 'an' before vowel sounds; 'honest' starts with a vowel sound."
+    },
+    {
+      "id": "b012",
+      "q": "Which is correct? \"There <span class=\"hl\">___</span> many people.\"",
+      "opts": [
+        "is",
+        "are",
+        "was",
+        "be"
+      ],
+      "c": 1,
+      "explanation": "Plural subject -> 'There are'."
+    },
+    {
+      "id": "b013",
+      "q": "Choose the correct form: \"She <span class=\"hl\">___</span> to school every day.\"",
+      "opts": [
+        "go",
+        "goes",
+        "going",
+        "gone"
+      ],
+      "c": 1,
+      "explanation": "3rd person singular in present simple takes -s: goes."
+    },
+    {
+      "id": "b014",
+      "q": "Choose the correct modal: \"You <span class=\"hl\">___</span> smoke here.\"",
+      "opts": [
+        "must",
+        "mustn't",
+        "should",
+        "might"
+      ],
+      "c": 1,
+      "explanation": "Mustn't expresses prohibition."
+    },
+    {
+      "id": "b015",
+      "q": "Choose the correct sentence: \"He <span class=\"hl\">___</span> work at 8.\"",
+      "opts": [
+        "finish",
+        "finishes",
+        "finished",
+        "finishing"
+      ],
+      "c": 1,
+      "explanation": "Present simple with he/she/it -> finishes."
+    },
+    {
+      "id": "b016",
+      "q": "Which is correct? \"I\"m looking forward <span class=\"hl\">___</span> you.\"",
+      "opts": [
+        "to see",
+        "to seeing",
+        "see",
+        "seeing to"
+      ],
+      "c": 1,
+      "explanation": "'Look forward to' + gerund (verb-ing)."
+    },
+    {
+      "id": "b017",
+      "q": "Choose the correct tense: \"Right now, she <span class=\"hl\">___</span>.\"",
+      "opts": [
+        "studies",
+        "is studying",
+        "studied",
+        "has studied"
+      ],
+      "c": 1,
+      "explanation": "'Right now' typically uses Present Continuous: is studying."
+    },
+    {
+      "id": "b018",
+      "q": "Pick the correct option: \"I have lived here <span class=\"hl\">___</span> ten years.\"",
+      "opts": [
+        "since",
+        "for",
+        "from",
+        "by"
+      ],
+      "c": 1,
+      "explanation": "Use 'for' with durations (ten years)."
+    },
+    {
+      "id": "b019",
+      "q": "Choose the correct option: \"Can you <span class=\"hl\">___</span> me a favor?\"",
+      "opts": [
+        "do",
+        "make",
+        "take",
+        "have"
+      ],
+      "c": 0,
+      "explanation": "Collocation: do someone a favor."
+    },
+    {
+      "id": "b020",
+      "q": "Which sentence is correct?",
+      "opts": [
+        "I don't have no money.",
+        "I have any money.",
+        "I don't have any money.",
+        "I no have money."
+      ],
+      "c": 2,
+      "explanation": "Negative + any: don't have any money."
+    },
+    {
+      "id": "b021",
+      "q": "Choose the correct question:",
+      "opts": [
+        "Where you are going?",
+        "Where are you going?",
+        "Where going you are?",
+        "Where you going are?"
+      ],
+      "c": 1,
+      "explanation": "Question word + auxiliary + subject: Where are you going?"
+    },
+    {
+      "id": "b022",
+      "q": "Choose the correct sentence with <span class=\"hl\">there is/are</span>.",
+      "opts": [
+        "There are a book on the table.",
+        "There is books on the table.",
+        "There is a book on the table.",
+        "There be a book on the table."
+      ],
+      "c": 2,
+      "explanation": "Singular noun -> There is a book."
+    },
+    {
+      "id": "b023",
+      "q": "Choose the correct phrasal verb: \"Please <span class=\"hl\">___</span> the lights.\"",
+      "opts": [
+        "turn on",
+        "turn in",
+        "turn over",
+        "turn up"
+      ],
+      "c": 0,
+      "explanation": "Turn on = switch on."
+    },
+    {
+      "id": "b024",
+      "q": "Choose the correct form: \"I\"m <span class=\"hl\">___</span> than my brother.\"",
+      "opts": [
+        "taller",
+        "more tall",
+        "most tall",
+        "tallest"
+      ],
+      "c": 0,
+      "explanation": "Comparative of 'tall' is 'taller'."
+    },
+    {
+      "id": "b025",
+      "q": "Choose the correct option: \"This is the <span class=\"hl\">___</span> day of my life.\"",
+      "opts": [
+        "good",
+        "better",
+        "best",
+        "more good"
+      ],
+      "c": 2,
+      "explanation": "Superlative of 'good' is 'best'."
+    },
+    {
+      "id": "b026",
+      "q": "Choose the correct sentence: \"I can\"t stand <span class=\"hl\">___</span> in line.\"",
+      "opts": [
+        "wait",
+        "to wait",
+        "waiting",
+        "waited"
+      ],
+      "c": 2,
+      "explanation": "Can't stand + gerund: can't stand waiting."
+    },
+    {
+      "id": "b027",
+      "q": "Choose the correct form: \"He is good <span class=\"hl\">___</span> math.\"",
+      "opts": [
+        "at",
+        "in",
+        "on",
+        "to"
+      ],
+      "c": 0,
+      "explanation": "Collocation: good at."
+    },
+    {
+      "id": "b028",
+      "q": "Choose the correct option: \"I\"ll call you when I <span class=\"hl\">___</span> home.\"",
+      "opts": [
+        "will get",
+        "get",
+        "got",
+        "am getting"
+      ],
+      "c": 1,
+      "explanation": "Future time clause with 'when' uses present simple: when I get home."
+    },
+    {
+      "id": "b029",
+      "q": "Choose the correct quantifier: \"I have <span class=\"hl\">___</span> friends here.\"",
+      "opts": [
+        "much",
+        "many",
+        "a little",
+        "less"
+      ],
+      "c": 1,
+      "explanation": "Many is used with countable plural nouns: many friends."
+    },
+    {
+      "id": "b030",
+      "q": "Choose the correct sentence: \"She\"s <span class=\"hl\">___</span> than me.\"",
+      "opts": [
+        "more intelligent",
+        "intelligenter",
+        "most intelligent",
+        "intelligentest"
+      ],
+      "c": 0,
+      "explanation": "Long adjectives use 'more' in comparatives."
+    },
+    {
+      "id": "b031",
+      "q": "Choose the correct option: \"I\"m <span class=\"hl\">___</span> to meet you.\"",
+      "opts": [
+        "excited",
+        "exciting",
+        "excite",
+        "excitedly"
+      ],
+      "c": 0,
+      "explanation": "People feel excited; things are exciting."
+    },
+    {
+      "id": "b032",
+      "q": "Choose the correct sentence: \"He <span class=\"hl\">___</span> ever been to Japan.\"",
+      "opts": [
+        "didn't",
+        "hasn't",
+        "isn't",
+        "wasn't"
+      ],
+      "c": 1,
+      "explanation": "Present perfect negative: hasn't ever been."
+    },
+    {
+      "id": "b033",
+      "q": "Choose the correct linking word: \"I studied a lot, <span class=\"hl\">___</span> I failed.\"",
+      "opts": [
+        "so",
+        "but",
+        "because",
+        "and"
+      ],
+      "c": 1,
+      "explanation": "Contrast: but."
+    },
+    {
+      "id": "b034",
+      "q": "Choose the correct option: \"She\"s been working here <span class=\"hl\">___</span> Monday.\"",
+      "opts": [
+        "for",
+        "since",
+        "during",
+        "by"
+      ],
+      "c": 1,
+      "explanation": "'Since' + starting point (Monday)."
+    },
+    {
+      "id": "b035",
+      "q": "Choose the correct modal: \"You <span class=\"hl\">___</span> see a doctor.\"",
+      "opts": [
+        "should",
+        "mustn't",
+        "can't",
+        "needn't"
+      ],
+      "c": 0,
+      "explanation": "Should is advice."
+    },
+    {
+      "id": "b036",
+      "q": "Choose the correct form: \"If I <span class=\"hl\">___</span> you, I would apologize.\"",
+      "opts": [
+        "am",
+        "were",
+        "was",
+        "be"
+      ],
+      "c": 1,
+      "explanation": "Second conditional commonly uses 'were' for all subjects: If I were you."
+    },
+    {
+      "id": "b037",
+      "q": "Choose the correct option: \"Let\"s <span class=\"hl\">___</span> a break.\"",
+      "opts": [
+        "do",
+        "make",
+        "take",
+        "have"
+      ],
+      "c": 2,
+      "explanation": "Collocation: take a break."
+    },
+    {
+      "id": "b038",
+      "q": "Choose the correct pronoun: \"Between you and <span class=\"hl\">___</span>, this is secret.\"",
+      "opts": [
+        "I",
+        "me",
+        "my",
+        "mine"
+      ],
+      "c": 1,
+      "explanation": "After prepositions use object pronoun: between you and me."
+    },
+    {
+      "id": "b039",
+      "q": "Choose the correct option: \"I\"d rather <span class=\"hl\">___</span> at home tonight.\"",
+      "opts": [
+        "to stay",
+        "staying",
+        "stay",
+        "stayed"
+      ],
+      "c": 2,
+      "explanation": "Would rather + base verb."
+    },
+    {
+      "id": "b040",
+      "q": "Choose the correct sentence: \"The movie was <span class=\"hl\">___</span>.\"",
+      "opts": [
+        "bored",
+        "boring",
+        "bore",
+        "boredly"
+      ],
+      "c": 1,
+      "explanation": "Things are boring; people are bored."
+    },
+    {
+      "id": "b041",
+      "q": "Choose the correct option: \"I\"ll have finished by the time you <span class=\"hl\">___</span>.\"",
+      "opts": [
+        "arrive",
+        "will arrive",
+        "arrived",
+        "are arriving"
+      ],
+      "c": 0,
+      "explanation": "Time clauses with 'by the time' use present simple for the future: you arrive."
+    },
+    {
+      "id": "b042",
+      "q": "Choose the correct option: \"She\"s the person <span class=\"hl\">___</span> helped me.\"",
+      "opts": [
+        "which",
+        "who",
+        "where",
+        "when"
+      ],
+      "c": 1,
+      "explanation": "Use 'who' for people in defining relative clauses."
+    },
+    {
+      "id": "b043",
+      "q": "Choose the correct option: \"How <span class=\"hl\">___</span> sugar do you want?\"",
+      "opts": [
+        "many",
+        "much",
+        "few",
+        "little"
+      ],
+      "c": 1,
+      "explanation": "Sugar is uncountable -> much."
+    },
+    {
+      "id": "b044",
+      "q": "Choose the correct sentence: \"He <span class=\"hl\">___</span> me yesterday.\"",
+      "opts": [
+        "call",
+        "called",
+        "has called",
+        "calling"
+      ],
+      "c": 1,
+      "explanation": "Yesterday -> simple past: called."
+    },
+    {
+      "id": "b045",
+      "q": "Choose the correct option: \"I\"m not used to <span class=\"hl\">___</span> early.\"",
+      "opts": [
+        "wake up",
+        "waking up",
+        "to wake up",
+        "woke up"
+      ],
+      "c": 1,
+      "explanation": "Be used to + noun/gerund: used to waking up."
+    },
+    {
+      "id": "b046",
+      "q": "Choose the correct sentence: \"Neither Tom nor his friends <span class=\"hl\">___</span> coming.\"",
+      "opts": [
+        "is",
+        "are",
+        "was",
+        "be"
+      ],
+      "c": 1,
+      "explanation": "With 'neither...nor', verb often agrees with the nearest subject (friends -> are)."
+    },
+    {
+      "id": "b047",
+      "q": "Choose the correct option: \"I\"ll let you know as soon as I <span class=\"hl\">___</span> news.\"",
+      "opts": [
+        "will have",
+        "have",
+        "had",
+        "am having"
+      ],
+      "c": 1,
+      "explanation": "As soon as + present simple for future meaning: as soon as I have news."
+    },
+    {
+      "id": "b048",
+      "q": "Choose the correct option: \"This is <span class=\"hl\">___</span> information.\"",
+      "opts": [
+        "an",
+        "a",
+        "some",
+        "many"
+      ],
+      "c": 2,
+      "explanation": "Information is uncountable; use 'some' or no article."
+    },
+    {
+      "id": "b049",
+      "q": "Choose the correct sentence: \"I don\"t mind <span class=\"hl\">___</span> you.\"",
+      "opts": [
+        "help",
+        "to help",
+        "helping",
+        "helped"
+      ],
+      "c": 2,
+      "explanation": "Don't mind + gerund: don't mind helping."
+    },
+    {
+      "id": "b050",
+      "q": "Choose the correct option: \"She has <span class=\"hl\">___</span> finished her work.\"",
+      "opts": [
+        "yet",
+        "already",
+        "still",
+        "ago"
+      ],
+      "c": 1,
+      "explanation": "Affirmative present perfect often uses 'already'."
+    }
+  ],
+  "fill": [
+    {
+      "id": "f001",
+      "q": "If I <span class=\"fill-blank\">___</span> (know) about the meeting, I would have attended.",
+      "answer": "had known",
+      "hint": "3rd conditional: If + Past Perfect."
+    },
+    {
+      "id": "f002",
+      "q": "She <span class=\"fill-blank\">___</span> (live) here for 10 years by next month.",
+      "answer": "will have lived",
+      "hint": "Future Perfect: will have + past participle."
+    },
+    {
+      "id": "f003",
+      "q": "By the time you arrive, I <span class=\"fill-blank\">___</span> (finish) cooking.",
+      "answer": "will have finished",
+      "hint": "Future Perfect with time clause."
+    },
+    {
+      "id": "f004",
+      "q": "I wish I <span class=\"fill-blank\">___</span> (be) taller.",
+      "answer": "were",
+      "hint": "Wish about the present often uses 'were' for all subjects."
+    },
+    {
+      "id": "f005",
+      "q": "He\"s not used to <span class=\"fill-blank\">___</span> (work) at night.",
+      "answer": "working",
+      "hint": "Be used to + gerund."
+    },
+    {
+      "id": "f006",
+      "q": "I\"ve been studying English <span class=\"fill-blank\">___</span> (since/for) 2022.",
+      "answer": "since",
+      "hint": "Use 'since' with a starting point (year/date)."
+    },
+    {
+      "id": "f007",
+      "q": "She speaks English as <span class=\"fill-blank\">___</span> (fluent) as her teacher.",
+      "answer": "fluently",
+      "hint": "As...as + adverb to describe how someone speaks."
+    },
+    {
+      "id": "f008",
+      "q": "If it <span class=\"fill-blank\">___</span> (rain) tomorrow, we will cancel the trip.",
+      "answer": "rains",
+      "hint": "1st conditional: If + present simple."
+    },
+    {
+      "id": "f009",
+      "q": "I don\"t mind <span class=\"fill-blank\">___</span> (help) you.",
+      "answer": "helping",
+      "hint": "Don't mind + gerund."
+    },
+    {
+      "id": "f010",
+      "q": "This is the <span class=\"fill-blank\">___</span> (good) pizza I\"ve ever had.",
+      "answer": "best",
+      "hint": "Superlative of 'good' is 'best'."
+    }
+  ],
+  "vocab": [
+    { "w": "ELOQUENT", "p": "/ˈel.ə.kwənt/ · adj", "m": "Able to express ideas clearly and effectively." },
+    { "w": "PERSEVERE", "p": "/ˌpɜː.sɪˈvɪər/ · verb", "m": "To continue trying despite difficulties." },
+    { "w": "TENACIOUS", "p": "/tɪˈneɪ.ʃəs/ · adj", "m": "Very determined; not willing to stop." },
+    { "w": "NUANCE", "p": "/ˈnjuː.ɑːns/ · noun", "m": "A subtle difference in meaning or expression." },
+    { "w": "LEVERAGE", "p": "/ˈlev.ər.ɪdʒ/ · n/v", "m": "Use something to maximum advantage." },
+    { "w": "RESILIENT", "p": "/rɪˈzɪl.i.ənt/ · adj", "m": "Able to recover quickly from difficulties." },
+    { "w": "ARTICULATE", "p": "/ɑːˈtɪk.jʊ.lət/ · adj", "m": "Able to express ideas fluently and coherently." },
+    { "w": "PROFOUND", "p": "/prəˈfaʊnd/ · adj", "m": "Very great or intense; having deep meaning." },
+    { "w": "AWARE", "p": "/əˈweər/ · adj", "m": "Knowing about a situation or fact." },
+    { "w": "ACHIEVE", "p": "/əˈtʃiːv/ · verb", "m": "To succeed in doing something." },
+    { "w": "IMPROVE", "p": "/ɪmˈpruːv/ · verb", "m": "To make something better." },
+    { "w": "CONFIDENT", "p": "/ˈkɒn.fɪ.dənt/ · adj", "m": "Sure of yourself and your abilities." },
+    { "w": "CONSISTENT", "p": "/kənˈsɪs.tənt/ · adj", "m": "Always happening in the same way." },
+    { "w": "FOCUS", "p": "/ˈfəʊ.kəs/ · noun/verb", "m": "The center of attention; to concentrate." },
+    { "w": "CHALLENGE", "p": "/ˈtʃæl.ɪndʒ/ · noun/verb", "m": "A difficult task; to test someone." },
+    { "w": "RECALL", "p": "/rɪˈkɔːl/ · verb", "m": "To remember something." },
+    { "w": "ACCURATE", "p": "/ˈæk.jə.rət/ · adj", "m": "Correct and without errors." },
+    { "w": "EFFICIENT", "p": "/ɪˈfɪʃ.ənt/ · adj", "m": "Working well without wasting time or energy." },
+    { "w": "STRATEGY", "p": "/ˈstræt.ə.dʒi/ · noun", "m": "A plan to achieve a goal." },
+    { "w": "FEEDBACK", "p": "/ˈfiːd.bæk/ · noun", "m": "Information used to improve performance." }
+  ]
+}
